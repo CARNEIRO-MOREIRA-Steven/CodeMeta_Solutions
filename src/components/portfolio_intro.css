@@ -1,0 +1,193 @@
+.homepage_portfolio{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFC82A;
+}
+
+.projet_container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    gap: 10%;
+    margin: 0 100px;
+}
+
+.homepage_portfolio_title{
+    margin-top: 50px;
+    font-size: 40px;
+    color: #000000;
+}
+
+.projet_description{
+    width: 50%;
+    height: 100%;
+}
+
+
+.projet_informations{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.projet_informations p, h2{
+    color: #000000;
+}
+
+.projet_informations p {
+    font-size: 20px;
+    font-weight: 600;
+    width: 80%;
+    text-align: center;
+}
+
+.projet_capture{
+    position: absolute;
+    height: 363.5px;
+    width: 205px;
+    object-fit: cover;
+    left: 215px;
+}
+
+.projet_visualisation{
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.image_iphone{
+    height: 100%;
+    margin-left: 100px;
+}
+
+.prev_projet, .next_projet{
+    position: absolute;
+    border: none;
+    background: none;
+}
+
+.prev_projet, .next_projet, img{
+    height: 50px;
+}
+
+.next_projet{
+    right: 50px;
+}
+
+.prev_projet{
+    left: 50px;
+}
+
+.tag_liste{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;;
+}
+
+.tag{
+    color: #000000;
+    font-size: 20px;
+}
+
+.tag_css{
+    padding: 5px 25px;
+    border-radius: 25px;
+    background-color: rgb(0, 0, 255);
+    opacity: calc(0.75);
+}
+
+.tag_html{
+    padding: 5px 25px;
+    border-radius: 25px;
+    background-color: rgb(255, 94, 0);
+    opacity: calc(0.75);
+}
+
+.tag_next{
+    padding: 5px 25px;
+    border-radius: 25px;
+    background-color: rgb(0, 149, 255);
+    opacity: calc(0.75);
+}
+
+.tag_javascript{
+    padding: 5px 25px;
+    border-radius: 25px;
+    background-color: rgb(234, 255, 0);
+    opacity: calc(0.75);
+}
+
+.link_button{
+    margin-top: 25px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 700;
+}
+
+@media screen and (min-width : 320px) and (max-width: 767px) {
+    .homepage_portfolio{
+        height: 1000px;
+    }
+    .projet_container{
+        flex-direction: column;
+        height: 1000px;
+        flex-direction: column-reverse;
+    }
+    .homepage_portfolio_title{
+        font-size: 30px;
+    }
+    .projet_description{
+        width: 90%;
+    }
+    .projet_visualisation{
+        height: 50%;
+    }
+    .image_iphone{
+        margin-left: 0;
+    }
+    .projet_capture{
+        height: 228px;
+        width: 128px;
+        left: auto;
+        margin-left: 9px;
+    }
+}
+
+@media screen and (min-width : 768px) and (max-width: 1024px) {
+    .projet_container{
+        margin: 0;
+    }
+    .projet_informations{
+        align-items: flex-start;
+    }
+    .projet_informations p{
+        text-align: start;
+    }
+    .image_iphone{
+        margin-left: 50px;
+    }
+    .projet_capture{
+        left: 64.5px;
+    }
+    .next_projet{
+        right: 10px;
+    }
+    .prev_projet{
+        left: 10px;
+    }
+    ul.tag_liste{
+        padding: 0;
+    }
+}

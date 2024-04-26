@@ -1,0 +1,143 @@
+import './banner.css'
+import React, { useEffect, useRef, useState } from 'react';
+import {motion, useAnimation} from "framer-motion";
+
+const Banner = () => {
+  const [bannerVisible, bannerIsVisible] = useState(false);
+  const [bannerMidVisible, bannerMidIsVisible] = useState(false);
+  const [bannerBotVisible, bannerBotIsVisible] = useState(false);
+  const fuseeControls = useAnimation();
+  const firstTitleControls = useAnimation();
+  const secondTitleControls = useAnimation();
+  const threeTitleControls = useAnimation();
+  const bannerRef = useRef(null);
+  const bannerMidRef = useRef(null);
+  const bannerBotRef = useRef(null);
+
+
+  useEffect(() => {
+    const bannerTopOffset = bannerRef.current.offsetTop
+    const bannerMidOffset = bannerMidRef.current.offsetTop
+    const bannerBotOffset = bannerBotRef.current.offsetTop
+    
+    const handleScroll = () => {
+      if (window.scrollY > bannerTopOffset - window.innerHeight / 0){
+        bannerIsVisible(true)
+      }
+      if (window.scrollY > bannerMidOffset- window.innerHeight / 0.75){
+        bannerMidIsVisible(true)
+      }
+      if (window.scrollY > bannerBotOffset- window.innerHeight / 1.5){
+        bannerBotIsVisible(true)
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    };
+
+  }, []);
+
+  useEffect(() => {
+    const animateBanner = async () => {
+      if(bannerVisible || bannerIsVisible){
+        await fuseeControls.start({
+          x: 520,
+          y :-300,
+          transition : {duration : 0.7}
+        }),
+        await fuseeControls.start({
+         rotate : 360,
+         transition : {duration : 0.5, delay : 0.2}
+        }),
+        await firstTitleControls.start({
+          opacity : 1,
+          scale : 1,
+          transition : { duration : 0.5}
+        })
+      if(bannerMidVisible){
+        await Promise.all([
+          fuseeControls.start({
+          x: 0,
+          y : 100,
+          transition : {duration : 0.7}
+        }),
+      ]);
+        await fuseeControls.start({
+          rotate : 0,
+        }),
+        await secondTitleControls.start({
+          opacity : 1,
+          scale : 1,
+          transition : { duration : 0.5}
+        }),
+        await Promise.all([
+          threeTitleControls.start({
+            x : 0,
+            opacity : 1,
+            transition : { duration : 0.4, delay : 3}
+          }),
+          fuseeControls.start({
+            x : 520,
+            transition : { duration : 0.4, delay : 3}
+          }),
+          secondTitleControls.start({
+            x : 1000,
+            transition : { duration : 0.4, delay : 3}
+          })
+        ]);
+        if(bannerMidVisible && bannerBotVisible){
+        await fuseeControls.start({
+          y : 900,
+          x : 1000,
+        })
+      }
+      }}
+    };
+    animateBanner();
+  }, [fuseeControls, bannerVisible, bannerMidVisible,])
+
+  return (
+    <motion.section ref={bannerRef} className='banner'>
+    <section className='banner_intro'>
+    <section className='top_banner'>
+    <motion.h2 
+    animate={firstTitleControls}
+    initial={{opacity : 0, scale : 0, y : 70}}
+    className='first_title'>
+      En tant que Développeur front-end passionné, nous mettons notre expertise au services de la création de site web qui allient esthétique et convivialité</motion.h2>
+    <motion.img
+    animate={fuseeControls}
+    initial={{x:0,y:0}}
+     className='img_banner' 
+     src='CodeMetaSolutionsLogo.png'></motion.img>
+     <img className='image_1' src='./ffdqs.png'></img>
+     <section>
+         <motion.h2 
+    animate={secondTitleControls}
+    initial={{opacity : 0, scale : 0, x : 320, y : 225}}
+    className='second_title'>
+      Fortement versés dans des frameworks modernes tels que Next.js, nous sommes en mesure de créer des expériences web hautement dynamiques et interactives.</motion.h2>
+      <motion.h2 
+    animate={threeTitleControls}
+    initial={{opacity : 0, x : -400}}
+    className='three_title'>
+      En combinant notre expertise en HTML, CSS, JavaScript et autres technologies front-end, nous sommes en mesure de créer des interfaces utilisateur 
+      exceptionnelles qui captivent et engagent les utilisateurs.</motion.h2>
+      </section>
+     </section>
+    <motion.section  ref={bannerMidRef}></motion.section>
+      </section><p>tg</p>
+      <p>rgeh</p>
+      <p>tg</p>
+      <p>rgeh</p>
+        <motion.section ref={bannerBotRef}></motion.section>
+
+     </motion.section>
+   
+  )
+}
+
+export default Banner
