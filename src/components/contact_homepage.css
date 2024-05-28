@@ -1,0 +1,60 @@
+.footer_section{
+    width: 100%;
+}
+.logo_banner_contact{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin-left: 5%;
+}
+.contact_homepage{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #EFC82A;
+}
+
+.contact_homepage img{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact_homepage_image{
+    height: 100%;
+    width: 30%;
+}
+
+.contact_homepage h2{
+    color : #000000;
+    font-size: 40px;
+}
+
+.contact_homepage_informations{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_homepage_informations ul{
+    padding: 0;
+}
+
+.contact_homepage_informations li {
+    color: #000000;
+    font-size: 25px;
+    list-style: none;
+}
+
+.contact_icons_reseaux{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.contact_icons_reseaux img {
+    height: 50px;
+    width: 50px;
+}
