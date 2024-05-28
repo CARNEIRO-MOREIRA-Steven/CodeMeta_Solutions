@@ -87,13 +87,12 @@ const PortfolioIntro = () => {
       iphone : "./ohmyfood_iphone.webp",
     },
     {
-      name : "Nina Carducci",
-      objectif : "Optimisez le référencement d'un site de photographe",
-      tags : ["HTML", "CSS", "JAVASCRIPT"],
-      github : "https://github.com/Squaad6z/ninacarducci",
-      link : "https://CARNEIRO-MOREIRA-Steven.github.io/ninacarducci/",
-      iphone : "./NinaCarducci_iphone.webp",
-    },
+      name : "L'espace d'un Instant",
+      objectif : "Développer le site web d'une maison d'hote",
+      tags : ["WordPress"],
+      link : "https://lespaced1instant.com/",
+      iphone : "./lespaced1instant.png"
+    }
   ] 
 
   const openLink = () => {
