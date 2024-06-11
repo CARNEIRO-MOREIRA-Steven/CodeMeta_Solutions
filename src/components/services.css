@@ -11,18 +11,17 @@
 }
 .categories_services{
     display: flex;
-    justify-content: center;
     flex-direction: row-reverse;
-    margin-right: 100px;
 }
 .categories_services_titles{
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-right: 100px;
 }
 .categories_services_image{
-    width: 800px;
+    width: 50%;
     height: 700px;
     object-fit: cover;
 }

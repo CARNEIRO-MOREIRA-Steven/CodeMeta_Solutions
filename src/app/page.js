@@ -6,6 +6,7 @@ import Competences from '@/components/Competences'
 import PortfolioIntro from '@/components/PortfolioIntro'
 import ServicesIntro from '@/components/ServicesIntro'
 import ContactHomepage from '@/components/ContactHomepage'
+import ServicesPrix from '@/components/ServicesPrix'
 
 
 const page = () => {
@@ -16,6 +17,7 @@ const page = () => {
         <Competences />
         <PortfolioIntro />
         <ServicesIntro />
+        <ServicesPrix />
         <ContactHomepage />
       </section>
     )
