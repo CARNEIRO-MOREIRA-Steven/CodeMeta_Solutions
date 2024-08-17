@@ -62,12 +62,12 @@ const Banner = () => {
     <motion.section ref={bannerRef} className='banner'>
     <section className='banner_section'>
     <section className='banner_texte'>
-    <motion.h2
+    <motion.h1
     animate={titleControls}
     initial={{opacity : 0, y : -250}}
     className='banner_title'>
     Création web sur mesure. Votre vision, notre expertise.
-    </motion.h2>
+    </motion.h1>
     <aside className='aside_button'>
     <motion.button 
     animate={aProposControls}

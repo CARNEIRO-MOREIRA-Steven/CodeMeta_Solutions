@@ -24,3 +24,7 @@ a{
   align-items: center;
   overflow: hidden;
 }
+
+h2{
+  font-size: 40px;
+}

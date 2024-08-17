@@ -8,24 +8,29 @@
     background-color: #EFC82A;
 }
 
+.image_section{
+    width: 50%;
+    height: 100%;
+}
+
 .projet_container{
     display: flex;
     height: 100%;
-    width: 100%;
+    width: 50%;
     align-items: center;
     gap: 10%;
-    margin: 0 100px;
 }
 
 .homepage_portfolio_title{
     margin-top: 50px;
-    font-size: 40px;
+    text-align: center;
     color: #000000;
 }
 
 .projet_description{
-    width: 50%;
+    width: 100%;
     height: 100%;
+    padding:0 50px ;
 }
 
 
@@ -49,15 +54,13 @@
 }
 
 .projet_capture{
-    position: absolute;
-    height: 363.5px;
-    width: 205px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    left: 215px;
 }
 
 .projet_visualisation{
-    height: 80%;
+    height: 100%;
     display: flex;
     align-items: center;
 }
@@ -71,6 +74,10 @@
     position: absolute;
     border: none;
     background: none;
+    z-index: 10;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 50px;
 }
 
 .prev_projet, .next_projet, img{

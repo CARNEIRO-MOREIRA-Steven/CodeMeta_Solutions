@@ -3,10 +3,9 @@ import React from 'react'
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
 import Competences from '@/components/Competences'
-import PortfolioIntro from '@/components/PortfolioIntro'
 import ServicesIntro from '@/components/ServicesIntro'
 import ContactHomepage from '@/components/ContactHomepage'
-import ServicesPrix from '@/components/ServicesPrix'
+import Projet_intro from '@/components/Projet_intro'
 
 
 const page = () => {
@@ -15,9 +14,8 @@ const page = () => {
         <Header />
         <Banner />
         <Competences />
-        <PortfolioIntro />
         <ServicesIntro />
-        <ServicesPrix />
+        <Projet_intro />
         <ContactHomepage />
       </section>
     )
