@@ -1,0 +1,19 @@
+.logos_section{
+    background-color: #EFC82A;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.logos_container {
+    display: flex;
+    width: max-content;
+  }
+  
+
+
+.logo_image{
+    height: 200px;
+    margin: 0 50px;
+}

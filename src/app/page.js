@@ -4,8 +4,10 @@ import Header from '@/components/Header'
 import Banner from '@/components/Banner'
 import Competences from '@/components/Competences'
 import ServicesIntro from '@/components/ServicesIntro'
-import ContactHomepage from '@/components/ContactHomepage'
 import Projet_intro from '@/components/Projet_intro'
+import LogoRealisation from '@/components/LogoRealisation'
+import ContactHomepage from '@/components/ContactHomepage'
+
 
 
 const page = () => {
@@ -16,6 +18,7 @@ const page = () => {
         <Competences />
         <ServicesIntro />
         <Projet_intro />
+        <LogoRealisation />
         <ContactHomepage />
       </section>
     )
