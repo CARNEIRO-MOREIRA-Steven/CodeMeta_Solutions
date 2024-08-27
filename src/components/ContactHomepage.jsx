@@ -4,7 +4,10 @@ import './contact_homepage.css'
 const ContactHomepage = () => {
   return (
     <section className='footer_section'>
+      <section className='footer_top'>
       <img className='logo_banner_contact' src='codemeta_solutions.png'></img>
+      <h2>Votre partenaire pour des solutions web sur mesure</h2>
+      </section>
     <section className='contact_homepage'>
     <section className='contact_homepage_image'>
       <img src='banner_image.jpg'></img></section>

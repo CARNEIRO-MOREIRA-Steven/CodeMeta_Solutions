@@ -12,6 +12,7 @@ const LogoRealisation = () => {
 
     return (
         <section className="logos_section">
+        <h2 className='logos_section_title'>Ils ont choisi notre expertise</h2>
         <motion.div
           className="logos_slider"
           animate={{ x: ['200%', '-100%'] }} // Animation de 0 à -100% du conteneur
