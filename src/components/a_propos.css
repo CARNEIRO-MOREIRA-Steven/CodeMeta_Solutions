@@ -1,15 +1,80 @@
-.a_propos_section{
+.a_propos_section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    margin: 50px 0;
 }
-.a_propos_description{
+
+.a_propos_description {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 1;
+    background: transparent; /* Pas de fond pour la carte */
+    color: #ffffff; /* Texte en blanc pour le contraste */
+    box-shadow:
+        0 0 5px #fff,
+        /* 0 0 10px #fff, */
+        0 0 15px #EFC82A,
+        0 0 20px #EFC82A,
+        /* 0 0 30px #EFC82A, */
+        inset 0 0 20px #EFC82A; /* Effet de néon autour de la bordure */
+    animation: neonPulse 1s infinite alternate; /* Animation pulsante */
 }
-.a_propos_title{
-    color : #ffffff ;
+
+#a_propos_title{
+    color: #fff;
+}
+
+.a_propos_description p {
+    color: #ffffff; /* Couleur du texte */
+    width: 85%;
+    text-align: center;
+    z-index: 1;
+}
+
+@keyframes neonPulse {
+    0% {
+        box-shadow:
+            0 0 5px #fff,
+            /* 0 0 10px #fff, */
+            0 0 15px #EFC82A,
+            0 0 20px #EFC82A,
+            /* 0 0 25px #EFC82A, */
+            inset 0 0 20px #EFC82A;
+    }
+    100% {
+        box-shadow:
+            0 0 10px #fff,
+            /* 0 0 15px #fff, */
+            0 0 20px #EFC82A,
+            0 0 30px #EFC82A,
+            /* 0 0 40px #EFC82A, */
+            inset 0 0 30px #EFC82A;
+    }
+}
+
+.a_propos_de_moi,
+.a_propos_expertise {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 50px;
+}
+
+.me_choisir {
+    width: 40%;
+    margin-top: -40px;
 }
