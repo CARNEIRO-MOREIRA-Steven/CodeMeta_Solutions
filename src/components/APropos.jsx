@@ -34,7 +34,7 @@ const APropos = () => {
         const animateAPropos = async () => {
             await aProposDescription1.start({
                 opacity : 1,
-                transition : { duration : 1, ease : "linear"},
+                transition : { duration : 0.5, ease : "linear"},
             });
             await aProposDescription1.start({
                 scale : 1,

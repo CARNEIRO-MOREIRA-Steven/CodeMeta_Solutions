@@ -3,7 +3,7 @@
 }
 
 .projet_intro_title{
-    color: #FFFFFF;
+    color: #00ffff;
     text-align: center;
     padding: 25px;
 }
@@ -22,6 +22,11 @@
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+}
+
+.info_projet h3{
+    color: #00ffff;
+    font-size: 25px;
 }
 
 .image_projet{

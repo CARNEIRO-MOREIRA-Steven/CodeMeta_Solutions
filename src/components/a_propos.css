@@ -27,10 +27,10 @@
     box-shadow:
         0 0 5px #fff,
         /* 0 0 10px #fff, */
-        0 0 15px #EFC82A,
-        0 0 20px #EFC82A,
+        0 0 15px #00ffff,
+        0 0 20px #00ffff,
         /* 0 0 30px #EFC82A, */
-        inset 0 0 20px #EFC82A; /* Effet de néon autour de la bordure */
+        inset 0 0 20px #00ffff; /* Effet de néon autour de la bordure */
     animation: neonPulse 1s infinite alternate; /* Animation pulsante */
 }
 
@@ -50,19 +50,19 @@
         box-shadow:
             0 0 5px #fff,
             /* 0 0 10px #fff, */
-            0 0 15px #EFC82A,
-            0 0 20px #EFC82A,
+            0 0 15px #00ffff,
+            0 0 20px #00ffff,
             /* 0 0 25px #EFC82A, */
-            inset 0 0 20px #EFC82A;
+            inset 0 0 20px #00ffff;
     }
     100% {
         box-shadow:
             0 0 10px #fff,
             /* 0 0 15px #fff, */
-            0 0 20px #EFC82A,
-            0 0 30px #EFC82A,
+            0 0 20px #00ffff,
+            0 0 30px #00ffff,
             /* 0 0 40px #EFC82A, */
-            inset 0 0 30px #EFC82A;
+            inset 0 0 30px #00ffff;
     }
 }
 

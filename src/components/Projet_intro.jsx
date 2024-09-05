@@ -9,11 +9,6 @@ const Projet_intro = () => {
       image: './NeufMoisDemain.png'
     },
     {
-      link: "https://cocoandco-vcl.com/",
-      title: "Coco & Co'",
-      image: './lespaceduninstant.png'
-    },
-    {
       link: "https://lespaced1instant.com/",
       title: "L'espace d'un Instant",
       image: './lespaceduninstant.png'

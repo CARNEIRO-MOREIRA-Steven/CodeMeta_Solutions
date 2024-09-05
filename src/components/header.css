@@ -1,39 +1,138 @@
-header{
+/* Styles pour le header général */
+header {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 100px;
 }
 
-header h1{
+header h1 {
     width: 150px;
     margin-left: 30px;
 }
 
-body{
+body {
     margin: 0;
 }
 
-nav{
+.desktop-nav {
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
-.header_logo{
+.header_logo {
     height: 110px;
     margin: 10px 30px;
 }
 
-@media screen and (min-width : 320px) and (max-width: 767px) {
+/* Menu mobile */
+.mobile-menu {
+  display: none;
+}
+
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span {
+  display: flex;
+  width: 29px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+              background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle input:checked ~ span {
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: #36383F;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: relative;
+  left: -60vw;
+  width: 180px;
+  height: 200px;
+  box-shadow: 0 0 10px #85888C;
+  margin: -50px 0 0 -50px;
+  padding: 50px;
+  padding-top: 25px;
+  background-color: #000000;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu.open {
+  transform: none;
+}
+
+#menu li {
+  padding: 10px 0;
+  transition-delay: 2s;
+  list-style: none;
+}
+
+#menu li a {
+    color: #00ffff;
+}
+
+@media screen and (min-width : 768px) and (max-width: 1024px) {
     header{
-        flex-direction: row-reverse;
-    }
-    header h1 {
-        margin-left:0 ;
-        height: 100%;
+        gap: 0;
+        justify-content: space-between;
     }
     nav{
-        display: none;
+        margin-left: 50px;
     }
+    .header_logo{
+        margin: 10px ;
+    }
+}
+@media screen and (max-width: 767px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  header {
+    flex-direction: row-reverse;
+    gap: 0;
+  }
 }

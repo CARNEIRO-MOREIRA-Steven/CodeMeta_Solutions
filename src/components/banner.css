@@ -1,9 +1,8 @@
 .banner{
     width: 100%;
-    height: 700px;
+    height: 86vh;
     display: flex;
     flex-direction: column;
-    background-color: #EFC82A;
     justify-content: center;
     overflow: hidden;
 }  
@@ -12,72 +11,93 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
+
+.banner_background {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    height: 86vh;
+    background-image: url("../../public/banner_image.jpg");
+    background-size: cover;
+    background-position: center; 
+    filter: brightness(50%); 
+    z-index: -1;
+  }
 
 .banner_texte{
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 100%;
-    align-items: center;
+    width: 60%;
+    align-items: flex-start;
     justify-content: center;
     overflow: hidden;
+    margin: 10%;
 }
 
 .banner_title{
+    width: 100%;
     display: flex;
     align-items: center;
     font-size: 60px;
     font-weight: 700;
-    color: #000000;
-    margin-left: 10%;
+    color: #00ffff;
     margin-top: 0 ;
 }
 
-.image_1{
-    width: 40%;
-    height: 700px;
-    object-fit: cover;
-}
-
 .button_banner{
-    width: 150px;
-    height: 50px;
+    width: 200px;
+    height: 60px;
     border: none;
-    border-radius: 15px;
+    border-radius: 30px;
+    background-color: #000000;
 }
 
 .button_banner a{
-    font-size: 20px;
-    color: #000000;
+    font-size: 22px;
+    color: #00ffff;
     font-weight: 700;
 }
 
 .aside_button{
     display: flex;
+
     gap: 100px;
+}
+@media screen and (min-width : 768px) and (max-width: 1024px) {
+    .aside_button{
+        gap: 50px;
+    }
 }
 
 @media screen and (min-width : 320px) and (max-width: 767px) {
     .banner{
-        height: 480px;
+        height: 80vh;
     }
     .banner_section{
         flex-direction: column;
+        justify-content: center;
+    }
+    .banner_background{
+        height: 80vh;
     }
     .banner_title{
         font-size: 30px;
         margin-top: 0px;
+        text-align: center;
     }
     .banner_texte{
         height: 60%;
+        width: 80%;
         padding: 25px 0;
+        align-items: center;
     }
     .aside_button{
-        gap: 10px;
-    }
-    .image_1{
-        width: 100%;
-        height: 40%;
+        gap: 50px;
+        display: flex;
+        flex-direction: column;
     }
 }

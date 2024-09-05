@@ -8,9 +8,9 @@
     gap: 100px;
 }
 .footer_top h2{
-    color: #ffffff;
+    color: #00ffff;
 }
-.logo_banner_contact{
+img.logo_banner_contact {
     width: 100px;
     height: 100px;
     padding: 10px;
@@ -23,7 +23,7 @@
 }
 
 .contact_homepage img{
-    height: 350px;
+    height: 500px;
     width: 100%;
     object-fit: cover;
 }
@@ -34,7 +34,7 @@
 }
 
 .contact_homepage h2{
-    color : #ffffff;
+    color : #00ffff;
     font-size: 40px;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .contact_homepage_informations li {
-    color: #ffffff;
+    color: #00ffff;
     font-size: 25px;
     list-style: none;
 }
