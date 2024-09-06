@@ -92,7 +92,7 @@ const Competences = () => {
           <motion.img
           animate={imageCard1}
           initial={{opacity:0}} className='competence_image' src='./swatchbook-solid.svg'></motion.img>
-          <motion.section 
+          <motion.section className='homepage_card_description'
           animate={competenceCard1Controls}
           initial={{opacity : 0, scale : 0}}>
           <h3 className='competence_card_title'> Conception Moderne et Intuitive</h3>
@@ -103,7 +103,7 @@ const Competences = () => {
         <section className='homepage_competence_card'>
         <motion.img animate={imageCard2}
           initial={{opacity:0}} className='competence_image' src='./connectdevelop-brands-solid.svg'></motion.img>
-        <motion.section
+        <motion.section className='homepage_card_description'
         animate={competenceCard2Controls}
         initial={{opacity : 0, scale : 0}}>
           <h3 className='competence_card_title'> Frameworks de Pointe pour des Sites Web Dynamiques </h3>
@@ -115,7 +115,7 @@ const Competences = () => {
         className='homepage_competence_card'>
         <motion.img animate={imageCard3}
           initial={{opacity:0}} className='competence_image' src='./users-solid.svg'></motion.img>
-        <motion.section 
+        <motion.section className='homepage_card_description'
         animate={competenceCard3Controls}
         initial={{opacity : 0, scale : 0}}>
           <h3 className='competence_card_title'> Approche Centrée sur l'Utilisateur </h3> 

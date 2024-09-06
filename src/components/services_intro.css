@@ -1,12 +1,18 @@
 .homepage_portfolio{
-    height: 700px;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(0deg, rgba(0,255,255,1) 0%, rgba(0,0,0) 100%);}
-
+    background: linear-gradient(0deg, rgba(0,255,255,1) 0%, rgba(0,0,0) 100%);
+}
+.no-scroll {
+    overflow: hidden;
+  }
+  .homepage_portfolio {
+    position: relative;
+    overflow: hidden; /* Empêche le contenu de dépasser du conteneur */
+  }  
 .image_section{
     width: 50%;
     height: 100%;
@@ -18,6 +24,7 @@
     width: 50%;
     align-items: center;
     gap: 10%;
+    margin: 0 0 50px 0;
 }
 
 .homepage_portfolio_title{
@@ -53,7 +60,7 @@
 }
 
 .projet_capture{
-    height: 100%;
+    height: 800px;
     width: 100%;
     object-fit: cover;
 }
@@ -82,6 +89,8 @@
 .prev_projet img, .next_projet img{
     height: 50px;
     filter: invert();
+    overflow-x : hidden !important
+
 }
 
 .next_projet{
@@ -94,53 +103,6 @@
     left: 50px;
     display: flex;
     justify-content: center;
-}
-
-.tag_liste{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    list-style: none;;
-}
-
-.tag{
-    color: #000000;
-    font-size: 20px;
-}
-
-.tag_css{
-    padding: 5px 25px;
-    border-radius: 25px;
-    background-color: rgb(0, 0, 255);
-    opacity: calc(0.75);
-}
-
-.tag_html{
-    padding: 5px 25px;
-    border-radius: 25px;
-    background-color: rgb(255, 94, 0);
-    opacity: calc(0.75);
-}
-
-.tag_next{
-    padding: 5px 25px;
-    border-radius: 25px;
-    background-color: rgb(0, 149, 255);
-    opacity: calc(0.75);
-}
-
-.tag_javascript{
-    padding: 5px 25px;
-    border-radius: 25px;
-    background-color: rgb(234, 255, 0);
-    opacity: calc(0.75);
-}
-
-.tag_wordpress{
-    padding: 5px 25px;
-    border-radius: 25px;
-    background-color: rgb(0, 115, 255);
-    opacity: calc(0.75);
 }
 
 .link_button{
@@ -156,39 +118,25 @@
 
 @media screen and (min-width : 320px) and (max-width: 767px) {
     .homepage_portfolio{
-        height: 1000px;
-    }
-    .projet_container{
-        flex-direction: column;
-        height: 1000px;
         flex-direction: column-reverse;
     }
-    .homepage_portfolio_title{
-        font-size: 30px;
-    }
     .projet_description{
-        width: 90%;
+        width: 100%;
+        padding: 0 20px;
     }
-    .projet_visualisation{
-        height: 50%;
-    }
-    .image_iphone{
-        margin-left: 0;
-    }
-    .projet_capture{
-        height: 228px;
-        width: 128px;
-        left: auto;
-        margin-left: 9px;
-    }
-}
-
-@media screen and (min-width : 768px) and (max-width: 1024px) {
     .projet_container{
-        margin: 0;
+        width: 100%;
+    }
+    .homepage_portfolio_title{
+        margin-top: 50px;
+        font-size: 25px; 
+    }
+    .projet_informations h2{
+        font-size: 19px;
+        text-align: center;
     }
     .projet_informations{
-        align-items: flex-start;
+        align-items: center;
     }
     .projet_informations p{
         text-align: start;
@@ -200,6 +148,56 @@
         left: 64.5px;
     }
     .next_projet{
+        right: 5px;
+        top: 200px;
+        background-color: #00000000;
+    }
+    .prev_projet{
+        left: 5px;
+        top: 200px;
+        background-color: #00000000;
+    }
+    .prev_projet img, .next_projet img{
+        height: 30px;
+    }
+    .image_section {
+        width: 100%;
+        height: 250px;
+    }
+    .projet_visualisation{
+        height: 250px;
+    }
+    .projet_capture{
+        height: 250px;
+    }
+    .projet_informations p {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width : 768px) and (max-width: 1023px) {
+    .homepage_portfolio{
+        height: 810px;
+    }
+    .homepage_portfolio_title{
+        margin-top: 50px;
+    }
+    .projet_container{
+        margin: 0;
+    }
+    .projet_informations{
+        align-items: center;
+    }
+    .projet_informations p{
+        text-align: start;
+    }
+    .image_iphone{
+        margin-left: 50px;
+    }
+    .projet_capture{
+        height: 250px;
+    }
+    .next_projet{
         right: 10px;
     }
     .prev_projet{
@@ -207,5 +205,15 @@
     }
     ul.tag_liste{
         padding: 0;
+    }
+    .image_section {
+        width: 100%;
+        height: 250px;
+    }
+    .projet_visualisation{
+        height: 250px;
+    }
+    .projet_informations p {
+        text-align: center;
     }
 }

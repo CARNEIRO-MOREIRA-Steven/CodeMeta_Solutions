@@ -6,7 +6,7 @@ const ContactHomepage = () => {
     <section className='footer_section'>
     <section className='contact_homepage'>
     <section className='contact_homepage_image'>
-      <img src='banner_image.jpg'></img></section>
+      <img id='image_footer' src='banner_image.jpg'></img></section>
       <section className='contact_homepage_informations'>
         <h2>Un Projet ? Nous contactez</h2>
         <ul>

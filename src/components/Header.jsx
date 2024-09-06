@@ -5,12 +5,30 @@ import './header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activePath, setActivePath] = useState('');
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Empêche le scroll quand le menu est ouvert
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setActivePath(window.location.pathname);
+    };
+
+    handleRouteChange();
+
+    window.addEventListener('popstate', handleRouteChange);
+    window.addEventListener('pushState', handleRouteChange);
+    window.addEventListener('replaceState', handleRouteChange);
+
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange);
+      window.removeEventListener('pushState', handleRouteChange);
+      window.removeEventListener('replaceState', handleRouteChange);
+    };
+  }, []);
+
   useEffect(() => {
     if (isMenuOpen) {
       document.body.classList.add('menu-open');
@@ -22,12 +40,12 @@ const Header = () => {
   return (
     <header>
       <nav className="desktop-nav">
-        <Link href='/'>Accueil</Link>
-        <Link href='/a_propos'>À propos</Link>
-        <Link href='/services'>Services</Link>
-        {/* <Link href='/projets'>Projets</Link> */}
-        <Link href='/temoignages'>Témoignages</Link>
-        <Link href='/contact'>Contact</Link>
+        <Link href='/' className={activePath === '/' ? 'active' : ''}>Accueil</Link>
+        <Link href='/a_propos' className={activePath === '/a_propos' ? 'active' : ''}>À propos</Link>
+        <Link href='/services' className={activePath === '/services' ? 'active' : ''}>Services</Link>
+        {/* <Link href='/projets' className={activePath === '/projets' ? 'active' : ''}>Projets</Link> */}
+        <Link href='/temoignages' className={activePath === '/temoignages' ? 'active' : ''}>Témoignages</Link>
+        <Link href='/contact' className={activePath === '/contact' ? 'active' : ''}>Contact</Link>
       </nav>
       <div className="mobile-menu">
         <div id="menuToggle">
@@ -36,12 +54,12 @@ const Header = () => {
           <span></span>
           <span></span>
           <ul id="menu" className={isMenuOpen ? 'open' : ''}>
-            <li><Link href='/'>Accueil</Link></li>
-            <li><Link href='/a_propos'>À propos</Link></li>
-            <li><Link href='/services'>Services</Link></li>
-            {/* <li><Link href='/projets'>Projets</Link></li> */}
-            <li><Link href='/temoignages'>Témoignages</Link></li>
-            <li><Link href='/contact'>Contact</Link></li>
+            <li><Link href='/' className={activePath === '/' ? 'active' : ''}>Accueil</Link></li>
+            <li><Link href='/a_propos' className={activePath === '/a_propos' ? 'active' : ''}>À propos</Link></li>
+            <li><Link href='/services' className={activePath === '/services' ? 'active' : ''}>Services</Link></li>
+            {/* <li><Link href='/projets' className={activePath === '/projets' ? 'active' : ''}>Projets</Link></li> */}
+            <li><Link href='/temoignages' className={activePath === '/temoignages' ? 'active' : ''}>Témoignages</Link></li>
+            <li><Link href='/contact' className={activePath === '/contact' ? 'active' : ''}>Contact</Link></li>
           </ul>
         </div>
       </div>

@@ -109,30 +109,43 @@ const PortfolioIntro = () => {
   
 
   const prevSlide = async () => {
-    await imageProjet.start({scale : 0})
-    await projetContainer.start({ x: '200%', transition: { duration: 0.2 } }),
+    // Désactive le défilement
+    document.body.classList.add('no-scroll');
+  
+    await imageProjet.start({ scale: 0 });
+    await projetContainer.start({ x: '200%', transition: { duration: 0.2 } });
     setSlideProjet((slideProjet - 1 + Projet.length) % Projet.length);
-    await controlsButtonLeft.start({x : '-100px'})
-    await controlsButtonRight.start({x : '100px'})
-    await imageProjet.start({x:'-100px'})
+    await controlsButtonLeft.start({ x: '-100px' });
+    await controlsButtonRight.start({ x: '100px' });
+    await imageProjet.start({ x: '-100px' });
     await projetContainer.start({ x: '0%', transition: { duration: 0.2 } });
-    await imageProjet.start({scale : 1})
-    await controlsButtonLeft.start({x : '0px'})
-    await controlsButtonRight.start({x : '0px'})
+    await imageProjet.start({ scale: 1, x: 0 });
+    await controlsButtonLeft.start({ x: '0px' });
+    await controlsButtonRight.start({ x: '0px' });
+  
+    // Réactive le défilement
+    document.body.classList.remove('no-scroll');
   };
-
+  
   const nextSlide = async () => {
-    await imageProjet.start({scale : 0,})
+    // Désactive le défilement
+    document.body.classList.add('no-scroll');
+  
+    await imageProjet.start({ scale: 0 });
     await projetContainer.start({ x: '200%', transition: { duration: 0.2 } });
     setSlideProjet((slideProjet + 1) % Projet.length);
-    await imageProjet.start({x:'-100px'})
-    await controlsButtonRight.start({x : '100px'})
-    await controlsButtonLeft.start({x : '-100px'})
+    await imageProjet.start({ x: '-100px' });
+    await controlsButtonRight.start({ x: '100px' });
+    await controlsButtonLeft.start({ x: '-100px' });
     await projetContainer.start({ x: '0%', transition: { duration: 0.2 } });
-    await imageProjet.start({scale : 1})
-    await controlsButtonLeft.start({x : '0px'})
-    await controlsButtonRight.start({x : '0px'})
+    await imageProjet.start({ scale: 1, x: 0 });
+    await controlsButtonLeft.start({ x: '0px' });
+    await controlsButtonRight.start({ x: '0px' });
+  
+    // Réactive le défilement
+    document.body.classList.remove('no-scroll');
   };
+  
   const projetActuel = Projet[slideProjet];
 
   return (

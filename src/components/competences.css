@@ -1,5 +1,4 @@
 .homepage_competence{
-    height: 900px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -24,11 +23,11 @@
 }
 
 .homepage_competence_container{
-    height: 500px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .homepage_competence_card{
@@ -38,7 +37,6 @@
     align-items: center;
     text-align: center;
     width: 200px;
-    height: 500px;
     border-radius: 25px;
 }
 
@@ -60,18 +58,57 @@
     position: absolute;
 }
 
-@media screen and (min-width : 320px) and (max-width: 767px) {
-    .homepage_competence{
-        height: 1350px;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .homepage_competence_title {
+        width: 90%;
+    }
+    .homepage_competence_h3 {
+        width: 80%;
+    }
+    .homepage_competence_card {
+        height: auto;
+        width: 30%;
+    }
+    .competence_card_title {
+        width: 100%;
+    }
+    .homepage_card_description{
+        display: flex;
+        flex-direction: column;
 
     }
-    .homepage_competence_container{
+}
+
+@media all and (max-width: 767px) {
+    .homepage_card_description {
+        display: flex;
         flex-direction: column;
-        height: 1000px;
+        align-items: center;
+    }
+    .homepage_competence_container {
+        flex-direction: column;
     }
     
-    .homepage_competence_title{
-        font-size: 30px;
-        width: 90%;
+    .homepage_competence_title {
+        font-size: 25px;
+        width: 95%;
+    }
+    .homepage_competence_card {
+        width: 80%;
+    }
+    .homepage_competence_h3 {
+        font-size: 20px;
+        width: 80%;
+    }
+    .competence_image {
+        width: 50px;
+        height: 50px;
+    }
+    .competence_card_title {
+        font-size: 19px;
+        width: 300px;
+    }
+    .homepage_competence_card p {
+        font-size: 17px;
     }
 }

@@ -113,41 +113,67 @@
 @media screen and (min-width : 768px) and (max-width: 1024px) {
     .aside_button{
         gap: 50px;
+        height: auto;
+        justify-content: center;
+    }
+    .banner_section{
+        flex-direction: column;
+    }
+    .banner_texte{
+        width: 80%;
+        margin: 0;
+        height: 500px;
+        justify-content: center;
+    }
+    .banner_title{
+        width: 100%;
+        margin: 50px 0;
+        font-size: 40px;
+        text-align: center;
+    }
+    .banner_aside_right{
+        margin : 0;
+        justify-content: center;
+    }
+    .button_banner{
+        margin-bottom: 0;
     }
 }
 
 @media screen and (min-width : 320px) and (max-width: 767px) {
-    .banner{
-        height: 80vh;
-    }
     .banner_section{
         flex-direction: column;
         justify-content: center;
     }
-    .banner_background{
-        height: 80vh;
-    }
     .banner_title{
-        font-size: 30px;
+        font-size: 25px;
         margin-top: 0px;
         margin-bottom: 10px;
         text-align: center;
     }
     .banner_texte{
-        width: 90%;
-        padding: 25px 0;
+        width: 100%;
         align-items: center;
+        justify-content: center;
+        gap: 10px;
         margin: 0;
+        height: 200px;
     }
     .aside_button{
         gap: 10px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
     .button_banner{
         margin: 0;
+        width: 150px;
+    }
+    .button_banner a {
+        font-size: 19px;
     }
     .banner_aside_right{
         margin-right: 0;
+        height: 500px;
+        justify-content: center;
     }
 }
