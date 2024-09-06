@@ -4,7 +4,7 @@ import './services_intro.css'
 import {motion, useAnimation} from "framer-motion";
 
 
-const PortfolioIntro = () => {
+const ServicesIntro = () => {
   const [portefolioVisible , portefolioIsVisible] = useState(false);
   const projetContainer = useAnimation();
   const portefolioImage = useAnimation();
@@ -39,7 +39,7 @@ const PortfolioIntro = () => {
           scale : 1,
           transition : { duration : 0.7 }
         }),
-      sectionTitle.start({
+        sectionTitle.start({
         opacity : 1, 
         scale : 1,
         transition : { duration : 0.7 }
@@ -103,9 +103,10 @@ const PortfolioIntro = () => {
   ] 
 
   const openLink = () => {
-    const openLinkIphone = Projet[slideProjet].link;
-    window.open(openLinkIphone, '_blank');
+    const sectionId = `#${Projet[slideProjet].name.replace(/\s+/g, '-').toLowerCase()}`;
+    window.location.href = `/services${sectionId}`;
   };
+  
   
 
   const prevSlide = async () => {
@@ -183,7 +184,7 @@ const PortfolioIntro = () => {
           <h2>{projetActuel.name}</h2>
           <p>{projetActuel.description}</p>
           <p>{projetActuel.tarif}</p>
-          <button className='link_button' onClick={openLink}>Consultez le site</button>
+          <button className='link_button' onClick={openLink}>En savoir plus sur ce service</button>
           </motion.aside>
           </section>
           </motion.section>
@@ -191,4 +192,4 @@ const PortfolioIntro = () => {
   )
 }
 
-export default PortfolioIntro
+export default ServicesIntro

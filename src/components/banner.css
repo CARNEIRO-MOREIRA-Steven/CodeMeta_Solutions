@@ -1,6 +1,5 @@
 .banner{
     width: 100%;
-    height: 86vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 565px;
 }
 
 .banner_background {
@@ -19,7 +18,7 @@
     top: 130px;
     left: 0;
     width: 100%;
-    height: 86vh;
+    height: 565px;
     background-image: url("../../public/banner_image.jpg");
     background-size: cover;
     background-position: center; 
@@ -30,9 +29,9 @@
 .banner_texte{
     display: flex;
     flex-direction: column;
-    height: 100%;
     width: 50%;
-    justify-content: space-between;
+    height: 100%;
+    justify-content: flex-start;
     margin-top: 100px;
     overflow: hidden;
     margin:0 0 0 100px;
@@ -42,10 +41,10 @@
     width: 80%;
     display: flex;
     align-items: center;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
     color: #ffff;
-    margin-top: 100px ;
+    margin-top: 50px ;
 }
 
 .button_banner{
@@ -53,7 +52,6 @@
     height: 60px;
     border: none;
     border-radius: 30px;
-    margin-bottom: 100px;
     background-color: #0000007e;
 }
 
@@ -65,7 +63,7 @@
 
 .aside_button{
     display: flex;
-    gap: 100px;
+    gap: 50px;
 }
 
 .banner_aside_right{
@@ -110,7 +108,7 @@
     margin-left: 10px;
 }
 
-@media screen and (min-width : 768px) and (max-width: 1024px) {
+@media screen and (min-width : 768px) and (max-width: 1023px) {
     .aside_button{
         gap: 50px;
         height: auto;
@@ -118,11 +116,14 @@
     }
     .banner_section{
         flex-direction: column;
+        height: 610px;
+    }
+    .banner_background{
+        height: 610px;
     }
     .banner_texte{
         width: 80%;
         margin: 0;
-        height: 500px;
         justify-content: center;
     }
     .banner_title{
@@ -133,6 +134,9 @@
     }
     .banner_aside_right{
         margin : 0;
+        flex-direction: row;
+        width: 100%;
+        gap: 50px;
         justify-content: center;
     }
     .button_banner{
@@ -144,6 +148,10 @@
     .banner_section{
         flex-direction: column;
         justify-content: center;
+        height: 640px;
+    }
+    .banner_background{
+        height: 640px;
     }
     .banner_title{
         font-size: 25px;
@@ -156,8 +164,7 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
-        margin: 0;
-        height: 200px;
+        margin: 20px 0 ;
     }
     .aside_button{
         gap: 10px;
@@ -173,7 +180,7 @@
     }
     .banner_aside_right{
         margin-right: 0;
-        height: 500px;
         justify-content: center;
+        margin-bottom: 17px;
     }
 }
