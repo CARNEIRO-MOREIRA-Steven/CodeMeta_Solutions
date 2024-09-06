@@ -31,21 +31,21 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 60%;
-    align-items: flex-start;
-    justify-content: center;
+    width: 50%;
+    justify-content: space-between;
+    margin-top: 100px;
     overflow: hidden;
-    margin: 10%;
+    margin:0 0 0 100px;
 }
 
 .banner_title{
-    width: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     font-size: 60px;
     font-weight: 700;
-    color: #00ffff;
-    margin-top: 0 ;
+    color: #ffff;
+    margin-top: 100px ;
 }
 
 .button_banner{
@@ -53,20 +53,63 @@
     height: 60px;
     border: none;
     border-radius: 30px;
-    background-color: #000000;
+    margin-bottom: 100px;
+    background-color: #0000007e;
 }
 
 .button_banner a{
     font-size: 22px;
-    color: #00ffff;
+    color: #ffff;
     font-weight: 700;
 }
 
 .aside_button{
     display: flex;
-
     gap: 100px;
 }
+
+.banner_aside_right{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    gap: 10px;
+}
+.aside_realisation, .aside_contact{
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+.aside_realisation h3, .aside_contact h3{
+    background-color: #0000007e;
+    height: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    border-radius: 0 0 25px 25px;
+}
+.aside_image{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 25px;
+
+}
+.aside_image_chevron{
+    height: 25px;
+    margin-left: 10px;
+}
+
 @media screen and (min-width : 768px) and (max-width: 1024px) {
     .aside_button{
         gap: 50px;
@@ -87,17 +130,24 @@
     .banner_title{
         font-size: 30px;
         margin-top: 0px;
+        margin-bottom: 10px;
         text-align: center;
     }
     .banner_texte{
-        height: 60%;
-        width: 80%;
+        width: 90%;
         padding: 25px 0;
         align-items: center;
+        margin: 0;
     }
     .aside_button{
-        gap: 50px;
+        gap: 10px;
         display: flex;
         flex-direction: column;
+    }
+    .button_banner{
+        margin: 0;
+    }
+    .banner_aside_right{
+        margin-right: 0;
     }
 }

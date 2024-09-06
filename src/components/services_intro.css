@@ -1,12 +1,11 @@
 .homepage_portfolio{
-    height: 600px;
+    height: 700px;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #00ffff;
-}
+    background: linear-gradient(0deg, rgba(0,255,255,1) 0%, rgba(0,0,0) 100%);}
 
 .image_section{
     width: 50%;
@@ -22,9 +21,9 @@
 }
 
 .homepage_portfolio_title{
-    margin-top: 50px;
+    margin-top: 100px;
     text-align: center;
-    color: #000000;
+    color: #ffff;
 }
 
 .projet_description{
@@ -43,7 +42,7 @@
 }
 
 .projet_informations p, h2{
-    color: #000000;
+    color: #ffff;
 }
 
 .projet_informations p {
@@ -75,21 +74,26 @@
     border: none;
     background: none;
     z-index: 10;
-    background-color: #ffffff;
+    background-color: #00000071;
     border-radius: 10px;
     width: 50px;
 }
 
-.prev_projet, .next_projet, img{
+.prev_projet img, .next_projet img{
     height: 50px;
+    filter: invert();
 }
 
 .next_projet{
     right: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .prev_projet{
     left: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .tag_liste{

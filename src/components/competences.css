@@ -1,50 +1,59 @@
-.homepage_services{
-    height: 750px;
+.homepage_competence{
+    height: 900px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     overflow: hidden;
 }
 
-.homepage_services_title{
-    width: 60%;
+.homepage_competence_title{
+    width: 65%;
     text-align: center;
     margin-top: 50px;
     color: #00ffff;
 }
 
-.homepage_services_container{
-    height: 450px;
+.homepage_competence_h3{
+    width: 60%;
+    font-size: 25px;
+    margin-bottom: 50px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.homepage_competence_container{
+    height: 500px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.homepage_services_card{
+.homepage_competence_card{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
     width: 200px;
-    height: 300px;
+    height: 500px;
     border-radius: 25px;
 }
 
-.services_card_title{
-    height: 95px;
-}
-
-.homepage_services_card p{
+.competence_card_title{
+    width: 250px;
+    margin-top: 35px;
     color: #00ffff;
 }
+.homepage_competence_card p{
+    color: #ffff;
+}
 
-.banner_image{
-    height: 40px;
-    width: 50px;
+.competence_image{
+    height: 80px;
+    width: 80px;
 }
 
 .projet_image{
@@ -52,16 +61,16 @@
 }
 
 @media screen and (min-width : 320px) and (max-width: 767px) {
-    .homepage_services{
+    .homepage_competence{
         height: 1350px;
 
     }
-    .homepage_services_container{
+    .homepage_competence_container{
         flex-direction: column;
         height: 1000px;
     }
     
-    .homepage_services_title{
+    .homepage_competence_title{
         font-size: 30px;
         width: 90%;
     }

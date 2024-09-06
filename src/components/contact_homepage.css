@@ -1,6 +1,7 @@
 .footer_section{
     width: 100%;
 }
+
 .footer_top{
     display: flex;
     align-items: center;
@@ -8,7 +9,7 @@
     gap: 100px;
 }
 .footer_top h2{
-    color: #00ffff;
+    color: #ffff;
 }
 img.logo_banner_contact {
     width: 100px;
@@ -34,7 +35,7 @@ img.logo_banner_contact {
 }
 
 .contact_homepage h2{
-    color : #00ffff;
+    color : #ffff;
     font-size: 40px;
 }
 
@@ -51,7 +52,7 @@ img.logo_banner_contact {
 }
 
 .contact_homepage_informations li {
-    color: #00ffff;
+    color: #ffff;
     font-size: 25px;
     list-style: none;
 }
@@ -65,4 +66,5 @@ img.logo_banner_contact {
 .contact_icons_reseaux img {
     height: 50px;
     width: 50px;
+    filter: invert();
 }

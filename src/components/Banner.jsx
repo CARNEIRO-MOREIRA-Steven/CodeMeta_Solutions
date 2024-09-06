@@ -8,6 +8,8 @@ const Banner = () => {
   const imageControls = useAnimation();
   const aProposControls = useAnimation();
   const nosServicesControls = useAnimation();
+  const asideRealisationControls= useAnimation();
+  const asideContactControls = useAnimation();
   const bannerRef = useRef(null);
 
   useEffect(() => {
@@ -51,10 +53,20 @@ const Banner = () => {
             transition: { duration: 0.3 }
           })
         ]);
+        await asideContactControls.start({
+          opacity : 1,
+          y : 0,
+          transition : { duration : 0.5, delay : 0.3},
+        });
+        await asideRealisationControls.start({
+          opacity : 1,
+          y : 0,
+          transition : { duration : 0.5}
+        });
       }
     };
     animateBanner();
-  }, [titleControls, imageControls, bannerVisible]);
+  }, [titleControls, imageControls, bannerVisible, asideContactControls, asideRealisationControls, nosServicesControls, aProposControls]);
 
   return (
     <motion.section ref={bannerRef} className='banner'>
@@ -65,7 +77,7 @@ const Banner = () => {
             animate={titleControls}
             initial={{opacity : 0, y : -250}}
             className='banner_title'>
-            Création web sur mesure. Votre vision, notre expertise.
+            Créons ensemble un site web qui fait la différence.
           </motion.h1>
           <aside className='aside_button'>
             <motion.button 
@@ -76,11 +88,33 @@ const Banner = () => {
             </motion.button>
             <motion.button 
               animate={nosServicesControls}
-              initial={{opacity : 0, x : 250}}
+              initial={{opacity : 0, x : 450}}
               className='button_banner'>
               <a href='/services'>Nos Services</a>
             </motion.button>
           </aside>
+        </section>
+        <section className='banner_aside_right'>
+          <motion.a href='#projet_intro_title'
+          animate={asideRealisationControls}
+          initial={{opacity : 0, y : -250}}>
+        <aside className='aside_realisation'>
+          <img className='aside_image' src='Pc_NeufMoisDemain.png'></img>
+          <h3>Nos dernières réalisations
+            <img className='aside_image_chevron' src='caret-right-solid.svg'></img>
+          </h3>
+        </aside>
+        </motion.a>
+        <motion.a href='/contact'
+        animate={asideContactControls}
+        initial={{opacity : 0, y : -250}}>
+        <aside className='aside_contact'>
+        <img className='aside_image' src='image_contact.png'></img>
+          <h3>Contactez-nous
+          <img className='aside_image_chevron' src='caret-right-solid.svg'></img>
+          </h3>
+        </aside>
+        </motion.a>
         </section>
       </section>
     </motion.section>

@@ -1,8 +1,7 @@
 .section_projet_intro{
     width: 100%;
 }
-
-.projet_intro_title{
+#projet_intro_title{
     color: #00ffff;
     text-align: center;
     padding: 25px;

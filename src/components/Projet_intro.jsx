@@ -22,7 +22,7 @@ const Projet_intro = () => {
 
   return (
     <section className='section_projet_intro'>
-      <h2 className='projet_intro_title'>Nos dernières réalisations</h2>
+      <h2 id='projet_intro_title'>Nos dernières réalisations</h2>
       <section className='section_differents_projets'>
         {Projets.map((projet, index) => (
           <section 
