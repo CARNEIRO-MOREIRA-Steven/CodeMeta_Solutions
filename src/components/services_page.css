@@ -1,3 +1,186 @@
-.service{
-    height: 1000px;
+.container_services{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.service{
+  height: 600px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.services_intro {
+    position: relative;
+    background-image: url('../../public/bureau-moderne.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    padding: 100px 20px; 
+    text-align: center;
+    height: 400px; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .intro_content {
+    position: relative;
+    z-index: 5;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 100px;
+  }
+
+  .intro_content h1{
+    font-size: 50px;
+  }
+  
+  .intro_content p {
+    font-size: 25px;
+    text-align: justify;
+  }
+  
+  .services_intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(0, 0, 0, 0.712); 
+    z-index: 1;
+  }
+
+  .service_description{
+    width: 50%;
+  }
+  .service_description ul{
+    padding: 0;
+  }
+
+  .service_image{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  #site-e-commerce, #site-de-réservation-de-services, #services-supplementaires{
+    flex-direction: row-reverse;
+  }
+
+.side-menu {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; 
+    height: auto;
+    background-color: #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: width 0.3s; 
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .side-menu:hover {
+    width: 260px; 
+  }
+  
+  .side-menu ul {
+    list-style: none;
+    padding: 15px 0 15px 15px;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .side-menu ul li {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    white-space:wrap;
+  }
+  
+  .side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 10px 10px 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, padding-left 0.3s;
+    position: relative;
+  }
+  
+  .side-menu ul li img {
+    width: 24px; 
+    height: 24px;
+    margin-right: 5px; 
+    flex-shrink: 0;
+  }
+  
+  .menu-text {
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: opacity 0.3s;
+    padding-left: 5px;
+  }
+  
+  .side-menu:hover .menu-text,
+  .side-menu.open .menu-text {
+    opacity: 1;
+  }
+  
+  @media (max-width: 767px) {
+    #site-e-commerce, #site-de-réservation-de-services, #services-supplementaires{
+      flex-direction: column;
+    }
+    .service{
+      flex-direction: column;
+      height: auto;
+      gap: 20px;
+    }
+    .service_description{
+      width:  80%;
+    }
+    .service_description h2{
+      font-size: 22px;
+    }
+    .service_image{
+      width: 250px;
+      height: 200px;
+    }
+    .services_intro{
+      justify-content: center;
+    }
+    .intro_content{
+      width: 80%;
+      margin-right: 0;
+      align-items: center;
+    }
+    .intro_content h1{
+      font-size: 25px;
+    }
+    .intro_content p {
+      font-size: 17px;
+    }
+    .side-menu {
+      width:40px; /* Largeur du menu sur mobile avec les icônes */
+    }
+
+    .side-menu ul {
+      padding: 15px 0 15px 15px;
+    }
+    .side-menu.open {
+      width: 260px; /* Largeur du menu lorsqu'il est ouvert sur mobile */
+    }
+  }
+  
