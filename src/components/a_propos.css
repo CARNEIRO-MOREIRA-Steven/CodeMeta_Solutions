@@ -9,33 +9,10 @@
     margin: 50px 0;
 }
 
-.a_propos_description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 250px;
-    position: relative;
-    margin: 10px 0;
-    padding: 20px;
-    border-radius: 30px;
-    overflow: hidden;
-    z-index: 1;
-    background: transparent; /* Pas de fond pour la carte */
-    color: #ffffff; /* Texte en blanc pour le contraste */
-    box-shadow:
-        0 0 5px #fff,
-        /* 0 0 10px #fff, */
-        0 0 15px #00ffff,
-        0 0 20px #00ffff,
-        /* 0 0 30px #EFC82A, */
-        inset 0 0 20px #00ffff; /* Effet de néon autour de la bordure */
-    animation: neonPulse 1s infinite alternate; /* Animation pulsante */
-}
 
 #a_propos_title{
     color: #fff;
+    text-align: center;
 }
 
 .a_propos_description p {
@@ -44,37 +21,58 @@
     text-align: center;
     z-index: 1;
 }
-
-@keyframes neonPulse {
-    0% {
-        box-shadow:
-            0 0 5px #fff,
-            /* 0 0 10px #fff, */
-            0 0 15px #00ffff,
-            0 0 20px #00ffff,
-            /* 0 0 25px #EFC82A, */
-            inset 0 0 20px #00ffff;
-    }
-    100% {
-        box-shadow:
-            0 0 10px #fff,
-            /* 0 0 15px #fff, */
-            0 0 20px #00ffff,
-            0 0 30px #00ffff,
-            /* 0 0 40px #EFC82A, */
-            inset 0 0 30px #00ffff;
-    }
+.a_propos_description h3{
+    text-align: center;
 }
 
-.a_propos_de_moi,
-.a_propos_expertise {
+.a_propos_description{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     gap: 50px;
 }
 
-.me_choisir {
-    width: 40%;
-    margin-top: -40px;
+.a_propos_de_moi{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 50px;
+}
+
+.a_propos_img{
+    width: 30%;
+}
+
+.ma_photo{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.expertise, .qui_suis_je, .me_choisir{
+    display: flex;
+    flex-direction: row;
+}
+
+.expertise{
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 767px) {
+    .expertise, .qui_suis_je, .me_choisir {
+        flex-direction: column;
+    }
+
+    .a_propos_img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ma_photo{
+        width: 200px;
+        height: 200px;
+    }
 }

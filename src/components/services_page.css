@@ -138,6 +138,15 @@
   .side-menu.open .menu-text {
     opacity: 1;
   }
+
+  @media screen and (min-width : 768px) and (max-width: 1023px) {
+    .service_image{
+      width: 300px;
+    }
+    .intro_content{
+      width: 70%;
+    }
+  }
   
   @media (max-width: 767px) {
     #site-e-commerce, #site-de-réservation-de-services, #services-supplementaires{
@@ -147,19 +156,22 @@
       flex-direction: column;
       height: auto;
       gap: 20px;
+      width: 80%;
     }
     .service_description{
       width:  80%;
+      margin-left: 50px;
     }
     .service_description h2{
       font-size: 22px;
     }
     .service_image{
-      width: 250px;
+      width: 240px;
       height: 200px;
     }
     .services_intro{
       justify-content: center;
+      height: 320px;
     }
     .intro_content{
       width: 80%;
