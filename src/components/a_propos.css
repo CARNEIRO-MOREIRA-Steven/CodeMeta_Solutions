@@ -9,62 +9,85 @@
     margin: 50px 0;
 }
 
-
 #a_propos_title{
     color: #fff;
     text-align: center;
+    margin-bottom: 0;
 }
 
 .a_propos_description p {
-    color: #ffffff; /* Couleur du texte */
-    width: 85%;
-    text-align: center;
+    color: #ffffff;
+    width: 100%;
     z-index: 1;
+    text-align: justify;
 }
 .a_propos_description h3{
     text-align: center;
+    color: #ffffff;
 }
 
 .a_propos_description{
     display: flex;
     flex-direction: column;
-    width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    width: 60%;
 }
 
 .a_propos_de_moi{
     display: flex;
     flex-direction: column;
-    width: 70%;
-    gap: 50px;
+    width: 80%;
+    gap: 20px;
 }
 
-.a_propos_img{
-    width: 30%;
-}
-
-.ma_photo{
+.ma_photo, .mon_logo{
     width: 300px;
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
 }
+
+.mon_logo{
+    border-radius: 0%;
+}
+
 .expertise, .qui_suis_je, .me_choisir{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .expertise{
     flex-direction: row-reverse;
 }
 
+@media screen and (min-width : 768px) and (max-width : 1023px) {
+    .a_propos_section{
+        gap: 50px;
+    }
+    .ma_photo, .mon_logo{
+        width: 200px;
+        height: 200px;
+    }
+}
+
 @media (max-width: 767px) {
+    .a_propos_section{
+        gap: 30px;
+    }
+    .a_propos_description{
+        width: 100%;
+    }
+    .a_propos_description p{
+        text-align: start;
+    }
     .expertise, .qui_suis_je, .me_choisir {
         flex-direction: column;
+        gap: 20px;
     }
-
     .a_propos_img{
         width: 100%;
         display: flex;

@@ -79,20 +79,20 @@ const ContactForm= () => {
       <aside className='aside_form'>
       <h3>- Comment me joindre ?</h3> 
       <div className='info_contact'>
-      <img alt='icon maison' src='./images/house-solid.svg'></img>
-      <p>SIEGE : <br></br> 650 rue Isidore de Pommery<br></br>60400C CUTS</p>
+      <img alt='icon maison' src='./house-solid.svg'></img>
+      <p>ADRESSE : 650 rue Isidore de Pommery 60400 CUTS</p>
       </div>
       <div className='info_contact'>
-      <img alt='icon envelope' src='./images/envelope-solid.svg'></img>
+      <img alt='icon envelope' src='./envelope-solid.svg'></img>
       <p>EMAIL : codemetasolutions@gmail.com</p>
       </div>
       <div className='info_contact'>
-      <img alt='icon telephone' src='./images/phone-solid.svg'></img>
-      <p>TEL : <br></br> 06.27.57.59.07</p>
+      <img alt='icon telephone' src='./phone-solid.svg'></img>
+      <p>TEL : 06.27.57.59.07</p>
       </div>
       <div className='info_contact'>
-      <img alt='icon card contact' src='./images/address-card-solid.svg'></img>
-      <p>SIRET : <br></br>98234189300013</p>
+      <img alt='icon card contact' src='./address-card-solid.svg'></img>
+      <p>SIRET : 98234189300013</p>
       </div>
       </aside>
       <section className='container_form'>

@@ -96,7 +96,7 @@ const APropos = () => {
                         Mes valeurs : Transparence, engagement, et satisfaction client.</p>
                         </section>
                         <section className='a_propos_img'>
-                        <img className='ma_photo' src='./codemeta_solutions.png'></img>
+                        <img className='mon_logo' src='./codemeta_solutions.png'></img>
                     </section>
                 </motion.section>
             </section>

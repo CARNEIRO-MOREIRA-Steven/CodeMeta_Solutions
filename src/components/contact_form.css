@@ -22,7 +22,9 @@
     bottom: 100px;
     width: 500px;
 }
-
+.form_complement p{
+    color: #ffffff;
+}
 .form_complement li {
     list-style: circle;
 }
@@ -46,7 +48,7 @@
   width: 500px;
   bottom: 100px;
   height: 450px;
-  justify-content: space-between; /* Ajout de cette ligne */
+  justify-content: space-between;
   background-color:  #000000;
   border-radius: 25px;
   padding: 40px 0px;
