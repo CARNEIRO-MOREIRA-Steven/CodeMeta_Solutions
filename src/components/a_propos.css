@@ -9,10 +9,15 @@
     margin: 50px 0;
 }
 
+.a_propos_img{
+    overflow: hidden;
+}
+
 #a_propos_title{
-    color: #fff;
+    color: #00ffff;
     text-align: center;
     margin-bottom: 0;
+    overflow : hidden;
 }
 
 .a_propos_description p {
@@ -58,6 +63,7 @@
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .expertise{

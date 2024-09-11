@@ -1,43 +1,52 @@
 "use client"
-import React, {  useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, {  useState, useEffect, useRef } from 'react';
+import { motion, useAnimation, useScroll, useTransform } from 'framer-motion';
 import './services_page.css';
 
 const ServicesPage = () => {
+  const serviceIntroTitle = useAnimation();
+  const serviceIntroDescription = useAnimation();
 
-  // const [activeImage, setActiveImage] = useState('user-tie-solid.svg'); // Image par défaut
-  // const { scrollYProgress } = useScroll();
+  const vitrineRef = useRef(null);
+  const [vitrineVisible, vitrineIsVisible]= useState(true)
+  //Animation
+  useEffect(() =>{
+      const vitrineTopOffeset = vitrineRef.current.offsetTop;
 
-  // // const scale = useTransform(scrollYProgress, [0, 1], [1, 2]); 
-  // const y = useTransform(scrollYProgress, [0, 1.5], ['0%', '100%']); 
+      const handleScroll = () => {
+        if (window.scrollY > vitrineTopOffeset - window.innerHeight / 2){
+          vitrineIsVisible(true)
+        }
+      };
+      window.addEventListener('scroll', handleScroll);
+      return() => {
+        window.removeEventListener('scroll', handleScroll)
+      };
+    }, []);
+  useEffect(() => {
+    const animateIntro = async () => {
+      await serviceIntroTitle.start({
+        scale : 1,
+        transition : { duration : 0.3, delay : 0.2 }
+      });
+      await serviceIntroDescription.start({
+        x : 0,
+        transition : { duration : 0.7, delay : 0.3}
+      })
+      if (vitrineVisible){
 
-  // useEffect(() => {
-  //   scrollYProgress.onChange((progress) => {
-  //     // Change l'image en fonction du scroll
-  //     if (progress > 0.14 && progress < 0.29) {
-  //       setActiveImage('user-tie-solid.svg');
-  //     } else if (progress >= 0.29 && progress < 0.44) {
-  //       setActiveImage('store-solid.svg');
-  //     } else if (progress >= 0.44 && progress < 0.59){
-  //       setActiveImage('gear-solid.svg');
-  //     } else if (progress >= 0.59 && progress < 0.74){
-  //       setActiveImage('code-solid_blue.svg');
-  //     } else if (progress >= 0.74 && progress < 0.89){
-  //       setActiveImage('gear-solid.svg');
-  //     } else if (progress >= 0.89 && progress < 0.99){
-  //       setActiveImage('user-tie-solid.svg');
-  //     }
-       
-  //   });
-  // }, [scrollYProgress]);
+      }
+    }; animateIntro();
+  })
 
+
+  //Effet Menu
   useEffect(() => {
     const handleMenuClick = () => {
       if (window.innerWidth <= 768) {
         document.querySelector('.side-menu').classList.toggle('open');
       }
     };
-
     const handleOutsideClick = (event) => {
       if (window.innerWidth <= 768) {
         const menu = document.querySelector('.side-menu');
@@ -63,20 +72,6 @@ const ServicesPage = () => {
 
   return (
     <section className='container_services'>
-      {/* <motion.img
-        src={activeImage}
-        alt="Image Dynamique"
-        style={{
-          position: 'fixed', // Fixe l'image pour qu'elle reste en vue lors du scroll
-          top: '20%', // Position initiale
-          left: '50%',
-          transform: 'translateX(-50%)', // Centrer horizontalement
-          // scale,
-          y, // Applique le déplacement vertical
-          width: '200px', // Taille de l'image
-          height: 'auto',
-        }}
-      /> */}
       <aside className='side-menu'>
         <ul>
           <li>
@@ -118,12 +113,15 @@ const ServicesPage = () => {
         </ul>
       </aside>
       <section className='services_intro'>
-      <div className='intro_content'>
-          <h1>Nos Services</h1>
-          <p>Nous proposons une gamme complète de services web pour aider votre entreprise à prospérer en ligne. Que vous ayez besoin d'un site vitrine, d'un site e-commerce, d'un portfolio professionnel, ou d'une solution entièrement sur mesure, nous avons ce qu'il vous faut. Découvrez nos services en détail ci-dessous.</p>
-      </div>
+      <aside className='intro_content'>
+          <motion.h1 animate={serviceIntroTitle}
+          initial={{ scale : 0 }}>Nos Services</motion.h1>
+          <motion.p animate={serviceIntroDescription}
+          initial = {{ x : -950}}>Nous proposons une gamme complète de services web pour aider votre entreprise à prospérer en ligne. Que vous ayez besoin d'un site vitrine, d'un site e-commerce,
+             d'un portfolio professionnel, ou d'une solution entièrement sur mesure, nous avons ce qu'il vous faut. Découvrez nos services en détail ci-dessous.</motion.p>
+      </aside>
       </section>
-      <section className='service' id="site-vitrine">
+      <motion.section ref={vitrineRef} className='service' id="site-vitrine">
         <section className='service_description'>
         <h2>Site Vitrine</h2>
         <p>
@@ -137,7 +135,7 @@ const ServicesPage = () => {
         <p>À partir de <strong>800€</strong></p>
         </section>
         <img className='service_image' src="vitrine.jpg" alt="Exemple de Site Vitrine" />
-      </section>
+      </motion.section>
       <section className='service' id="site-e-commerce">
       <section className='service_description'>
         <h2>Site E-commerce</h2>
