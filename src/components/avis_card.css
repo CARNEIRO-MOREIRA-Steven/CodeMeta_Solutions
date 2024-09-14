@@ -50,4 +50,13 @@
         width: 80%;
     }
   }
-  
+  @media screen and (min-width : 320px) and (max-width : 767px) {
+    .container{
+      padding: 20px 0 ;
+      flex-direction: column;
+      align-content: center;
+    }
+    .reviewCard{
+      width: 100%;
+    }
+  }

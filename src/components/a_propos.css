@@ -94,6 +94,9 @@
         flex-direction: column;
         gap: 20px;
     }
+    .expertise{
+        flex-direction: column-reverse;
+    }
     .a_propos_img{
         width: 100%;
         display: flex;

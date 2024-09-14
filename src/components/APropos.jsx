@@ -75,7 +75,6 @@ const APropos = () => {
                     opacity : 1,
                     transition : { duration : 0.5, delay : 0.5}
                 });
-                
                 if (aProposExpertiseVisible) {
                     await expertiseImage.start({
                         x : 0,
@@ -88,14 +87,14 @@ const APropos = () => {
                 }
     
                 if (aProposChoixVisible) {
-                    await logoImage.start({
-                        x : 0,
-                        transition : { duration : 0.7}
-                    })
                     await aProposDescription3.start({
                         opacity: 1,
                         transition: { duration: 0.7, delay : 0.5
                          }
+                    });
+                    await logoImage.start({
+                        x : 0,
+                        transition : { duration : 0.7}
                     });
                 }
             };
