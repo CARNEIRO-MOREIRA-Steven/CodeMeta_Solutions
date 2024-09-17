@@ -55,8 +55,8 @@
 }
 
 .aside_form{
-    background-color: #00ffff;
     border-radius: 15px;
+    border: #00ffff 2px solid;
     width: 30%;
     height: 450px;
     display: flex;
@@ -67,7 +67,7 @@
 
 
 .aside_form h2 ,h3, p{
-    color: #000000;
+    color: #00ffff;
 }
 
 .form_content {
@@ -93,6 +93,7 @@
     width: 30px;
     height: 100%;
     padding-right: 30px;
+    filter: invert();
 }
 
 input, textarea{
