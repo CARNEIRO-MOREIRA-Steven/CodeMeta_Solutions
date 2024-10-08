@@ -26,6 +26,11 @@ const AvisCard = () => {
       text: "Concepteur de confiance et très professionnel. Il est à l'écoute et très réactif. Patient et performant. Je recommande vivement. Je suis très satisfaite de son travail et je peux commencer mon activité avec un site internet au top. Merci beaucoup.",
       author: "Christelle SILVA - L'espace d'un Instant ",
     },
+    {
+      rating: 5,
+      text: "Un grand merci à CodeMeta Solutions pour cette belle collaboration et l'aboutissement du projet Neuf Mois Demain! Beaucoup de travail, beaucoup de sérieux et une grande écoute des besoins des clients, nous recommandons CodeMeta Solutions à 200%!!!",
+      author: "Séverine CARNEIRO MOREIRA - Neuf Mois Demain ",
+    },
   ];
 
   return (
